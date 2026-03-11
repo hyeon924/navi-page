@@ -1,0 +1,131 @@
+// Variables
+$color-primary: #5c4033;
+$color-primary-light: #8b5a2b;
+$color-accent: #8b7355;
+$color-text: #333;
+$color-text-muted: #6b5344;
+$color-bg: #fefdfb;
+$color-bg-hero: #fdf8f0;
+$color-bg-footer: #f5efe6;
+
+$font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family;
+  line-height: 1.6;
+  color: $color-text;
+  background-color: $color-bg;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(254, 253, 251, 0.95);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+
+  &__logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $color-primary-light;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__nav-link {
+    font-weight: 500;
+    color: $color-primary;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-primary-light;
+    }
+  }
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(180deg, $color-bg-hero 0%, $color-bg 100%);
+
+  &__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: $color-primary;
+    margin-bottom: 0.5rem;
+  }
+
+  &__desc {
+    font-size: 1.125rem;
+    color: $color-accent;
+  }
+}
+
+/* Section */
+.section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-primary;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    color: $color-text-muted;
+  }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: $color-bg-footer;
+  color: $color-accent;
+  font-size: 0.875rem;
+
+  &__text {
+    margin: 0;
+  }
+}
